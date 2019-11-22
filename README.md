@@ -4,8 +4,8 @@
 ### Prénom : John
 ### Groupe de TP : 
 - [ ] 1
-- [x] 2
-- [ ] 3
+- [ ] 2
+- [x] 3
 
 
 ### 0. Création et initialisation du projet Maven "question-score-project"
