@@ -36,7 +36,7 @@ public class QuestionAChoixExclusifTest {
         indiceEtudiant = 3;
         //and : on demande le calcul du score
         resScore = uneQuestion.getScoreForIndice(indiceEtudiant);
-        //then : le socre obtenu est 0
+        //then : le score obtenu est 0
         assertEquals(new Float(0f), resScore);
     }
 

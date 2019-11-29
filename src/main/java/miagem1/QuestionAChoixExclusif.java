@@ -1,7 +1,7 @@
 package miagem1;
 
 /**
- * Classe représentant une question à choix exclusive
+ * Classe représentant une question à choix exclusif
  */
 public class QuestionAChoixExclusif implements QuestionAChoix {
 
