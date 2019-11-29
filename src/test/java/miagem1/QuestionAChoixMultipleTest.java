@@ -12,6 +12,7 @@ import static org.junit.Assert.assertNotNull;
 public class QuestionAChoixMultipleTest {
     private QuestionAChoixMultiple unQCM;
     private List<Integer> reponses;
+    private int nbChoix;
 
     @Before
     public void setUp() throws Exception {
@@ -19,7 +20,8 @@ public class QuestionAChoixMultipleTest {
         reponses.add(3);
         reponses.add(5);
         reponses.add(7);
-        unQCM = new QuestionAChoixMultiple("test énoncé", reponses);
+        nbChoix = 5;
+        unQCM = new QuestionAChoixMultiple("test énoncé", reponses, nbChoix);
     }
 
     @Test
