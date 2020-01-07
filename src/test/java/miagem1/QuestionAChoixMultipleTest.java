@@ -6,8 +6,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 public class QuestionAChoixMultipleTest {
     private QuestionAChoixMultiple unQCM;
@@ -37,18 +36,19 @@ public class QuestionAChoixMultipleTest {
     @Test
     public void getScoreForIndiceTest() {
         Float resScore = new Float(0f);
-        // when: un etudiant fourni l'indice correspondant à la bonne réponse
+        // when : un etudiant fourni l'indice correspondant à la bonne réponse
         for (Integer indiceEtudiant : reponses) {
             //and : on demande le calcul du score
             resScore += unQCM.getScoreForIndice(indiceEtudiant);
         }
-        //then : le socre obtenu est 100
+        //then : le score obtenu est 100
         assertEquals(new Float(100f), resScore);
+
         // when : un étudiant fourni l'indice correspondant à une mauvaise réponse
         int indiceEtudiant = 4;
         //and : on demande le calcul du score
         resScore = unQCM.getScoreForIndice(indiceEtudiant);
         //then : le score obtenu est 0
-        assertEquals(new Float(0f), resScore);
+        assertTrue(resScore < 0f);
     }
 }

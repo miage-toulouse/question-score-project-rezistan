@@ -13,13 +13,11 @@ public class ScoreCalculateur {
      * @return le score compris entre 0 et 100
      */
     float calculeScore(List<Integer> indicesReponseEtudiant, QuestionAChoix question) {
-        float score = 0 ;
-        for (int indice:indicesReponseEtudiant) {
+        float score = 0;
+        for (int indice : indicesReponseEtudiant) {
             score += question.getScoreForIndice(indice);
         }
         return Math.max(0, score);
     }
-
-
 
 }
